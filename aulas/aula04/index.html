@@ -1,0 +1,37 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 04 - Formulario em JS</title>
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+    <h1>Formulario em JavaScript</h1>
+    <hr>
+    <form id="linhaform">
+        <input type="text" name="nome" id="nome" placeholder="escreva seu nome" required>
+        <br><br>
+        <input type="number" name="idade" id="idade" placeholder="escreva sua idade" required>
+        <br><br>
+        <input type="date" name="admissao" id="admissao" required>
+        <br><br>
+        <input type="date" name="demissao" id="demissao" required>
+        <br><br>
+        <button type="button" onclick="adicionarlinha()">Adicionar</button>
+    </form>
+        <br><br>
+        <table id="tabeladados">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>nome</th>
+                    <th>idade</th>
+                    <th>admissao</th>
+                    <th>demissao</th>
+                </tr>
+            </thead>
+        </table>
+        <script src="./formularia.js"></script>
+</body>
+</html>
