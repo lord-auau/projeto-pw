@@ -1,36 +1,32 @@
-let proximoId = 1
+let proximoId = 1;
 
-function adicionarlinha(){
-   const Produto = document.getElementById('Produto').value;
-   const Marca = document.getElementById('Marca').value;
-   const Seguimento = document.getElementById('Seguimento').value;
-   const Valor = document.getElementById('valor').value;
-   const Data = document.getElementById('Data').value;
-   
-    if (Produto === '' ||  Marca === '' || Seguimento === '' || Valor === '' || Data === ''){
-        alert("preencha todos os valores do Formulario!")
-    } else{
+function adicionarLinha() {
+    const produto = document.getElementById('produto').value;
+    const marca = document.getElementById('marca').value;
+    const segmento = document.getElementById('segmento').value;
+    const valor = document.getElementById('valor').value;
+    const data = document.getElementById('datacompra').value;
+
+    if (produto === '' || marca === '' || segmento === '' || valor === '' || data === '') {
+        alert("Preencha todos os valores do formulário!");
+    } else {
         const tabela = document.getElementById("tabeladados").getElementsByTagName('tbody')[0];
-    
-        //Crie uma nova linha na tabela
-        const novaLinha=tabela.insertRow();
-    
-        //inserindo os valores da linha
+        const novaLinha = tabela.insertRow();
+
         const celId = novaLinha.insertCell(0);
-        const celNome = novaLinha.insertCell(1);
-        const celIdade = novaLinha.insertCell(2);
-        const celAdmissao = novaLinha.insertCell(3);
-        const celDemissao = novaLinha.insertCell(4);
-    
-        //inserindo os valores dentro da celulas
-        celId.innerHTML = proximoId;
-        celProduto.innerHTML = Produto;
-        celMarca.innerHTML = Marca;
-        celAdmissao.innerHTML = admissao;
-        celDemissao.innerHTML = demissao;
-    
-        proximoId++
-    
-        //limpar formulario
-        document.getElementById("linhaform").reset();}
+        const celProduto = novaLinha.insertCell(1);
+        const celMarca = novaLinha.insertCell(2);
+        const celSegmento = novaLinha.insertCell(3);
+        const celValor = novaLinha.insertCell(4);
+        const celData = novaLinha.insertCell(5);
+
+        celId.innerHTML = proximoId++;
+        celProduto.innerHTML = produto;
+        celMarca.innerHTML = marca;
+        celSegmento.innerHTML = segmento;
+        celValor.innerHTML = valor;
+        celData.innerHTML = data;
+
+        document.getElementById("linhaform").reset();
+    }
 }
