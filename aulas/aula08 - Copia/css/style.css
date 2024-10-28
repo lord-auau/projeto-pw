@@ -18,10 +18,9 @@ table{
     width: 50%;
 }
 td, th{
-    border: 1px solid #6000a0b4;
+    border: 1px solid #000ba0b4;
     text-align: left;
     padding: 8px;
+    margin: 10px;
 }
-tr:nth-child(even){
-    background-color: #7b31f39d;
-}
+
