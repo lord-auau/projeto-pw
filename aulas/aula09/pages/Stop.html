@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideDown(5000);
+  });
+  $("#stop").click(function(){
+    $("#panel").stop();
+  });
+});
+</script>
+<style> 
+#panel, #flip {
+  padding: 5px;
+  font-size: 18px;
+  text-align: center;
+  background-color: #5ea1fa;
+  color: rgb(0, 0, 0);
+  border: solid 1px #020066;
+  border-radius: 3px;
+}
+
+#panel {
+  padding: 300px;
+  display: none;
+}
+</style>
+</head>
+<body>
+ 
+<button id="stop">Pare de Deslizar</button>
+
+<div id="flip">Click to slide down panel</div>
+<div id="panel">Olá👋, Como você está?
+</div>
+
+</body>
+</html>
